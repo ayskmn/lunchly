@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}VIP Customers{% endblock %}
+{% block content %}
+
+
+<h1>VIP Customers</h1>
+
+<ul style="column-count: 4">
+  {% for customer in vip_customers %}
+  <li><a href="/{{ customer.customer_id }}/">{{customer.customer_id}}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
